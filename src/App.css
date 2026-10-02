@@ -1,0 +1,89 @@
+/* 기본 리셋 및 전체 배경 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5f6fa;
+  transition: background-color 0.5s ease;
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 휴식 모드 배경색 */
+.app-container.break-mode {
+  background-color: #e0f2f1;
+}
+
+/* 타이머 박스 디자인 */
+.pomodoro-container {
+  background-color: white;
+  padding: 3rem 4rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  min-width: 320px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #636e72;
+  margin-bottom: 1rem;
+}
+
+.timer-display {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #2d3436;
+  margin-bottom: 2.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 버튼 영역 */
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+  background-color: #dfe6e9;
+  color: #2d3436;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* 버튼 색상 */
+.btn-primary {
+  background-color: #ff7675;
+  color: white;
+}
+
+.app-container.break-mode .btn-primary {
+  background-color: #00b894;
+  /* 휴식일 때 시작 버튼 색상 변경 */
+}
+
+.btn-danger {
+  background-color: #ff9f43;
+  color: white;
+}
